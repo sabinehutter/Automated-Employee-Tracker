@@ -89,9 +89,13 @@ switch(choice){
         return viewEmployees();
     case "EMPLOYEES_BY_DEPT":
         return viewEmployeesByDept();
+
+    default:
+        return quit();
+}
 }
 
-}
+
 
     // ask 
         // Add (departments, roles, employees)
