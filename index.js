@@ -89,9 +89,24 @@ switch(choice){
         return viewEmployees();
     case "EMPLOYEES_BY_DEPT":
         return viewEmployeesByDept();
+    case "EMPLOYEES_BY_MANGAEER":
+        return viewEmployeesByManager();
+    case "NEW_EMPLOYEE":
+        return addNewEmployee();
+    case "DELETE_EMPLOYEE":
+        return deleteEmployee();
+    case "UPDATE_ROLE":
+        return updateEmployeeRole();
+    case "UPDATE_MANAGER":
+        return updateEmployeeManager();
+    case "VIEW_ALL":
+        return viewEverything();
+    case "ADD_ROLE":
+        return addEmployeeRole();
 
-    default:
-        return quit();
+    // default:
+        // return quit();
+
 }
 }
 
