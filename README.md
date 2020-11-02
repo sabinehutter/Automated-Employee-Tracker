@@ -5,6 +5,10 @@
 
   ## Description
    This application allows you to automatically track your employees. It's features include viewing, adding, and changing employee information. 
+   
+   When the application begins it will appear in your terminal as the photo below. 
+   
+   ![Application Entry](https://github.com/sabinehutter/Automated-Employee-Tracker/blob/main/Assets/view-demo.png)
 
    This application prompts you to enter choose what you would like to do (view employee, role, department or add employee, role, department or change employeee role).
     
