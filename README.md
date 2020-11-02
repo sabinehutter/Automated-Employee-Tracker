@@ -15,6 +15,8 @@
    Below shows all the 'View' functionality of the application. 
    
    ![Application Functionality](https://github.com/sabinehutter/Automated-Employee-Tracker/blob/main/Assets/view-demo.png)
+   
+   A view of the application being demoed, can be found here https://drive.google.com/file/d/1Wrp2TPSPIgCZDRqVA_LMM-Nb24cej5oE/view?usp=sharing
 
     
   ## Hosted Application
