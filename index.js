@@ -81,10 +81,11 @@ async function IntroPrompts() {
             return addNewDepartment();
         case "QUIT":
             return quit();
+            break
 
         default:
             return quit();
-
+            break
     }
 }
 
@@ -204,8 +205,8 @@ async function addEmployeeRole() {
     })
 }
 
-async function quit() {
-    break
+async function quit(){
+    return console.log("Thanks for using the automated employee tracker!")
 }
 
 
