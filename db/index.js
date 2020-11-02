@@ -7,7 +7,9 @@ class DB {
 
     findAllEmployees() {
         return this.connection.query(
-            "SELECT first_name, last_name FROM employee"
+            // "SELECT first_name, last_name FROM employee"
+            "SELECT * FROM employee"
+
             // "SELECT employee.id, employee.first_name, employee.last_name, role.title, department.name AS department, role.salary, CONCAT(manager.first_name, ' ', manager.last_name) AS manager FROM employee LEFT JOIN role on employee.role_id = role.id LEFTT JOIN department on role.department_id"
         )
     }
@@ -46,6 +48,10 @@ class DB {
             "INSERT INTO role (title, salary, department_id) VALUES (?, ?, ?)", [roleTitle, roleSalary, roleDeptId]);
     }
 
+    updateEmployeeRole(employeeId, roleId) {
+        return this.connection.query(
+            "UPDATE employee SET role_id = ? WHERE id = ?", [roleId, employeeId]);
+    }
 
 }
 

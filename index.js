@@ -67,18 +67,10 @@ async function IntroPrompts() {
     switch (choice) {
         case "EMPLOYEES":
             return findAllEmployees();
-            // case "EMPLOYEES_BY_DEPT":
-            //     return viewEmployeesByDept();
-            // case "EMPLOYEES_BY_MANGAEER":
-            //     return viewEmployeesByManager();
         case "NEW_EMPLOYEE":
             return addNewEmployee();
-            // case "DELETE_EMPLOYEE":
-            //     return deleteEmployee();
         case "UPDATE_ROLE":
             return updateEmployeeRole();
-            // case "UPDATE_MANAGER":
-            //     return updateEmployeeManager();
         case "VIEW_ALL_ROLES":
             return viewRoles();
         case "ADD_ROLE":
@@ -144,9 +136,9 @@ async function addNewEmployee() {
             name: "NewEmployeeManagerId",
             message: "What is the new employees manager id?",
         }]).then(function (data) {
-        const new_table = db.addNewEmployee(data.NewEmployeeFirstName, data.NewEmployeeLastName, data.NewEmployeeRoleId, data.NewEmployeeManagerId);
+        db.addNewEmployee(data.NewEmployeeFirstName, data.NewEmployeeLastName, data.NewEmployeeRoleId, data.NewEmployeeManagerId);
         console.log("\n");
-        console.table(new_table);
+        console.log("Successfully Added");
 
         IntroPrompts()
 
@@ -159,7 +151,27 @@ async function addNewDepartment() {
             name: "NewDepartment",
             message: "What is the new department?",
         }]).then(function (data) {
-        const new_table = db.addNewDepartment(data.NewDepartment);
+        db.addNewDepartment(data.NewDepartment);
+        console.log("\n");
+        console.log("Successfully Added");
+
+        IntroPrompts()
+
+    })
+}
+
+async function updateEmployeeRole() {
+    await prompt([{
+            type: "input",
+            name: "employeeId",
+            message: "What is the id of the employees role that you would  like to  update?",
+        },{
+            type: "input",
+            name: "roleId",
+            message: "What is the new role for the employee?",
+        }
+    ]).then(function (data) {
+        db.updateEmployeeRole(data.employeeId, data.roleId);
         console.log("\n");
         console.log("Successfully Added");
 
@@ -193,7 +205,7 @@ async function addEmployeeRole() {
 }
 
 async function quit() {
-    return
+    break
 }
 
 
