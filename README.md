@@ -4,16 +4,14 @@
   # Welcome to the Automated Employee Tracker Application!  
 
   ## Description
-   This application allows you to automatically take notes. It's features include creating, saving, editing, and deleting notes. 
+   This application allows you to automatically track your employees. It's features include viewing, adding, and changing employee information. 
 
-   This application prompts you to enter your notes title and description and then you can save, delete or edit the note!
+   This application prompts you to enter choose what you would like to do (view employee, role, department or add employee, role, department or change employeee role).
     
   ## Hosted Application
   
-   The hosted application can be found at : [Live Note Taking Application](https://fast-chamber-21005.herokuapp.com/)
+   The application is currently not hosted but will be during the next iteration!
     
-   The application was deployed using the instructions found here : https://devcenter.heroku.com/articles/git#prerequisites-install-git-and-the-heroku-cli
-
   ## Table of Contents
   Navigate through the README Using the Table of Contents : 
 
@@ -26,10 +24,10 @@
   * [Questions](#questions)
 
   ## Installation
-    Run npm install then navigate to the Develop folder and run 'node server.js' to begin running the application. The application will then open on yuor local port 3000. 
+    Navigate to the working directoory and run npm install and run 'node server.js' to begin running the application. The application will then open on your terminal. 
 
   ## Usage
-    This project uses Javascript, Node.js, fs npm package, util npm package, express.js, npm uuid package, path npm package, Bootstrap, jQuery, CSS
+    This project uses Javascript, Node.js, express.js, asciiart-logo npm package, console.table functionality, inquirer npm package, and mysql.
 
   ## License
   MIT
