@@ -8,9 +8,14 @@
    
    When the application begins it will appear in your terminal as the photo below. 
    
-   ![Application Entry](https://github.com/sabinehutter/Automated-Employee-Tracker/blob/main/Assets/view-demo.png)
+   ![Application Entry](https://github.com/sabinehutter/Automated-Employee-Tracker/blob/main/Assets/entry-aet-meessage.png)
 
    This application prompts you to enter choose what you would like to do (view employee, role, department or add employee, role, department or change employeee role).
+   
+   Below shows all the 'View' functionality of the application. 
+   
+   ![Application Functionality](https://github.com/sabinehutter/Automated-Employee-Tracker/blob/main/Assets/view-demo.png)
+
     
   ## Hosted Application
   
