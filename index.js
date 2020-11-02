@@ -28,30 +28,30 @@ async function IntroPrompts(){
                 name: "View Employees",
                 value: "EMPLOYEES"
             },
-            {
-                name : "View Employees By Department",
-                value : "EMPLOYEES_BY_DEPT"
-            },
-            {
-                name : "View Employess By Manger",
-                value : "EMPLOYEES_BY_MANGAEER"
-            },
+            // {
+            //     name : "View Employees By Department",
+            //     value : "EMPLOYEES_BY_DEPT"
+            // },
+            // {
+            //     name : "View Employess By Manger",
+            //     value : "EMPLOYEES_BY_MANGAEER"
+            // },
             {
                 name : "Add New Employeee", 
                 value : "NEW_EMPLOYEE"
             },
-            {
-                name : "Remove Employee",
-                value : "DELETE_EMPLOYEE"
-            },
+            // {
+            //     name : "Remove Employee",
+            //     value : "DELETE_EMPLOYEE"
+            // },
             {
                 name : "Update Employees' Role",
                 value : "UPDATE_ROLE"
             },
-            {
-                name : "Update Employees' Manager",
-                value : "UPDATE_MANAGER"
-            },
+            // {
+            //     name : "Update Employees' Manager",
+            //     value : "UPDATE_MANAGER"
+            // },
             {
                 name : "View All Roles",
                 value : "VIEW_ALL"
@@ -60,10 +60,10 @@ async function IntroPrompts(){
                 name : "Add Role",
                 value : "ADD_ROLE"
             },
-            {
-                name : "Remove Role",
-                value : "REMOVE_ROLE"
-            },
+            // {
+            //     name : "Remove Role",
+            //     value : "REMOVE_ROLE"
+            // },
             {
                 name : "View Departments",
                 value : "VIEW_ALL_DEPT"
@@ -72,10 +72,10 @@ async function IntroPrompts(){
                 name : "Add Department",
                 value : "ADD_DEPT"
             },
-            {
-                name : "Remove Department",
-                value : "DELETE_DEPT"
-            },
+            // {
+            //     name : "Remove Department",
+            //     value : "DELETE_DEPT"
+            // },
             {
                 name : "Quit",
                 value : "QUIT"
@@ -87,25 +87,31 @@ async function IntroPrompts(){
 switch(choice){
     case "EMPLOYEES":
         return findAllEmployees();
-    case "EMPLOYEES_BY_DEPT":
-        return viewEmployeesByDept();
-    case "EMPLOYEES_BY_MANGAEER":
-        return viewEmployeesByManager();
+    // case "EMPLOYEES_BY_DEPT":
+    //     return viewEmployeesByDept();
+    // case "EMPLOYEES_BY_MANGAEER":
+    //     return viewEmployeesByManager();
     case "NEW_EMPLOYEE":
         return addNewEmployee();
-    case "DELETE_EMPLOYEE":
-        return deleteEmployee();
+    // case "DELETE_EMPLOYEE":
+    //     return deleteEmployee();
     case "UPDATE_ROLE":
         return updateEmployeeRole();
-    case "UPDATE_MANAGER":
-        return updateEmployeeManager();
+    // case "UPDATE_MANAGER":
+    //     return updateEmployeeManager();
     case "VIEW_ALL":
         return viewEverything();
     case "ADD_ROLE":
         return addEmployeeRole();
+    case "VIEW_ALL_DEPT":
+        return viewDepartments();
+    case "ADD_DEPT":
+        return addDepartment();
+    case "QUIT":
+        return quit();
 
-    // default:
-        // return quit();
+    default:
+        return quit();
 
 }
 }
@@ -119,6 +125,9 @@ async function findAllEmployees(){
     IntroPrompts()
 }
 
+async function quit(){
+    return 
+}
 
 
     // ask 
