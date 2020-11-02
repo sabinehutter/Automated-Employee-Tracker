@@ -19,7 +19,7 @@ function init(){
 
 // main menu 
 async function IntroPrompts(){
-    const { choice } = await([{
+    const { choice } = await prompt([{
         type: "list", 
         name: "choice", 
         message: "What would you like to do?", 
@@ -86,7 +86,7 @@ async function IntroPrompts(){
 
 switch(choice){
     case "EMPLOYEES":
-        return viewEmployees();
+        return findAllEmployees();
     case "EMPLOYEES_BY_DEPT":
         return viewEmployeesByDept();
     case "EMPLOYEES_BY_MANGAEER":
@@ -108,6 +108,15 @@ switch(choice){
         // return quit();
 
 }
+}
+
+async function findAllEmployees(){
+    const employees = await db.findAllEmployees();
+
+    console.log("\n");
+    console.table(employees);
+
+    IntroPrompts()
 }
 
 
