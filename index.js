@@ -54,7 +54,7 @@ async function IntroPrompts(){
             // },
             {
                 name : "View All Roles",
-                value : "VIEW_ALL"
+                value : "VIEW_ALL_ROLES"
             },
             {
                 name : "Add Role",
@@ -99,8 +99,8 @@ switch(choice){
         return updateEmployeeRole();
     // case "UPDATE_MANAGER":
     //     return updateEmployeeManager();
-    case "VIEW_ALL":
-        return viewEverything();
+    case "VIEW_ALL_ROLES":
+        return viewRoles();
     case "ADD_ROLE":
         return addEmployeeRole();
     case "VIEW_ALL_DEPT":
@@ -121,6 +121,63 @@ async function findAllEmployees(){
 
     console.log("\n");
     console.table(employees);
+
+    IntroPrompts()
+}
+
+async function viewDepartments(){
+    const departments = await db.viewDepartments();
+
+    console.log("\n");
+    console.table(departments);
+
+    IntroPrompts()
+}
+
+async function viewRoles(){
+    const roles = await db.viewRoles();
+
+    console.log("\n");
+    console.table(roles);
+
+    IntroPrompts()
+}
+
+async function addNewEmployee(){
+    await prompt([{
+        type: "input", 
+        name: "new-employee-firstname", 
+        message: "What is the new employees first name?",
+        },
+        {
+        type: "input", 
+        name: "new-employee-lastname", 
+        message: "What is the new employees last name?",
+        },
+        {
+            type: "input", 
+            name: "new-employee-roleid", 
+            message: "What is the new employees role id?",
+            },
+            {
+                type: "input", 
+                name: "new-employee-managerid", 
+                message: "What is the new employees manager id?",
+                }
+
+    
+    
+    ]).then(  function (data) {
+        // db.findAllEmployees()
+        console.log(data.new-employee-roleid)
+
+    }
+            )
+
+    // const employees = await db.findAllEmployees();
+
+    // console.log("\n");
+    // console.table(employees);
 
     IntroPrompts()
 }
